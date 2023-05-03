@@ -15,5 +15,11 @@ var Assets embed.FS
 // FileServer is a http handler that serves files. You must strip everything up to
 // and including the last "/" in the path, like this:
 //
-//	http.Handle("/static/", http.StripPrefix("/static/", fs))
+//	http.Handle("/css/", http.StripPrefix("/css/", skeletoncss.FileServer))
+//
+// Then, reference it in your HTML like this:
+//
+//	<link rel="stylesheet" href="css/fontfaces.css">
+//	<link rel="stylesheet" href="css/normalize.css">
+//	<link rel="stylesheet" href="css/skeleton.css">
 var FileServer = http.FileServer(http.FS(Assets))
