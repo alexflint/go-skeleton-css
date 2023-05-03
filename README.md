@@ -15,7 +15,7 @@ And then use it like this:
         "strings"
         "time"
 
-        skeletoncss "github.com/monasticacadedemy/go-skeleton-css"
+        skeletoncss "github.com/monasticacedemy/go-skeleton-css"
     )
 
     var html = `<!DOCTYPE html>
@@ -44,7 +44,7 @@ And then use it like this:
     func main() {
         http.Handle("/css/", http.StripPrefix("/css/", skeletoncss.FileServer))
         http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-            http.ServeContent(w, r, "example.html", time.Time{}, strings.NewReader(html))
+            http.ServeContent(w, r, "index.html", time.Time{}, strings.NewReader(html))
         })
 
         fmt.Println("listening on :8000")

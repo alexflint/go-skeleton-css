@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	skeletoncss "github.com/monasticacadedemy/go-skeleton-css"
+	skeletoncss "github.com/monasticacademy/go-skeleton-css"
 )
 
 //go:embed index.html
